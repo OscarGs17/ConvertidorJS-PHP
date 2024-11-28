@@ -1,0 +1,132 @@
+/* Fondo de página */
+body {
+  background-image: url(/public/img/fondo.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  animation: fadeInBackground 3s ease-in-out; /* Efecto de transición para el fondo */
+}
+
+/* Efecto de entrada del fondo */
+@keyframes fadeInBackground {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Diseño de los divs */
+div {
+  background-color: #f3f0f0;
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 15px; /* Bordes redondeados en los divs */
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-out; /* Efecto de entrada para los divs */
+}
+
+/* Efecto de deslizamiento para divs */
+@keyframes slideIn {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Título */
+h1 {
+  font-family: "Audiowide", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+  animation: bounce 1.5s ease-in-out infinite; /* Animación de rebote */
+}
+
+/* Efecto de rebote para el título */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Párrafo de instrucciones */
+p {
+  font-size: 1.1rem;
+  color: #000000;
+  opacity: 0;
+  animation: fadeInText 2s forwards; /* Animación de entrada para el texto */
+}
+
+/* Efecto de desvanecimiento para el párrafo */
+@keyframes fadeInText {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Área de texto */
+textarea {
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Transición para el efecto de enfoque */
+}
+
+/* Efecto de enfoque en el área de texto */
+textarea:focus {
+  transform: scale(1.05); /* Aumenta el tamaño cuando está enfocado */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.6); /* Sombra más fuerte cuando está enfocado */
+  border-color: #0056b3;
+}
+
+/* Botón */
+button {
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Transición de color y escalado */
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el ratón */
+}
+
+/* Sección de salida */
+.output {
+  margin-top: 30px;
+  animation: fadeInSection 2s ease-out; /* Animación para la salida */
+}
+
+/* Efecto de entrada suave para la sección de salida */
+@keyframes fadeInSection {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.output h3 {
+  color: #333;
+  font-size: 1.5rem;
+  text-decoration: underline; /* Subrayado para el título de salida */
+}
+
+pre {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  animation: fadeInCode 1.5s ease-in-out; /* Animación para el área de código */
+}
+
+/* Efecto de desvanecimiento para el área de código */
+@keyframes fadeInCode {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

@@ -1,0 +1,31 @@
+let
+function contador() {
+    for (let i = 0; i < 5; i++) {
+        console.log(`Número: ${i}`); // i solo es accesible dentro del bloque del for
+    }
+
+    // Aquí `i` no está definida, porque `let` tiene alcance de bloque.
+    try {
+        console.log(i); // Generará un error
+    } catch (error) {
+        console.log("Error: i no está definida fuera del bloque del for");
+    }
+}
+
+contador();
+php
+<?php
+function contador() {
+    for ($i = 0; $i < 5; $i++) {
+        echo "Número: $i\n";
+    }
+
+    if (isset($i)) {
+        echo "Variable i después del bucle: $i\n";
+    } else {
+        echo "Variable i no está definida fuera del bucle\n";
+    }
+}
+
+contador();
+?>
